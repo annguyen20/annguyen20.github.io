@@ -8,7 +8,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
     <meta name="author" content="3rd Wave Media">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -18,6 +17,7 @@
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
 
     <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/showMorecss.css">
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 
 </head>
@@ -26,7 +26,21 @@
     <!-- ******HEADER****** -->
     <header class="header">
         <div class="container">
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg" alt="James Lee" />
+            <script language="javascript" type="text/javascript">
+                function showHide(shID) {
+                    if (document.getElementById(shID)) {
+                        if (document.getElementById(shID+'-show').style.display != 'none') {
+                            document.getElementById(shID+'-show').style.display = 'none';
+                            document.getElementById(shID).style.display = 'block';
+                        }
+                        else {
+                            document.getElementById(shID+'-show').style.display = 'inline';
+                            document.getElementById(shID).style.display = 'none';
+                        }
+                    }
+                }
+            </script>
+            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg"/>
             <div class="profile-content pull-left">
                 <h1 class="name">An Nguyen</h1>
                 <h2 class="desc">Texas Christian University Class of 2018<br>Finance and Business Information Systems Double Major</h2>
@@ -58,8 +72,11 @@ I am a finance and business information systems double major, a horn frog, and a
                         <div class="content">
                             <div class="item row">
                                 <div class="desc col-md-12 col-sm-8 col-xs-12">
+
                                     <h3 class="title">Post 1</a></h3>
                                     <p>So it’s day one of blogging… and I have no idea where to start. So I’ve decided to just state a purpose and go from there. By starting this blog, I’m hoping that I knock out quite a few birds with one stone. I’ll mainly be talking about things I’ve learned in Business school, but this first post will tell me more about me. And the person I am. Continue reading if this interests you. Some reasons that I, personally, will be starting a blog are: </p>
+                                <a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">See more.</a></p>
+                                <div id="example" class="more">
                                 <p><b>1. Being about to express myself</b></p>
 
                                 <p>I’ve been constantly recommended to start a blog solely for this. My peers have been nagging me to start a blog so that they could get to know me better. I refer to my “peers” as people that have been referred to me by my close friends. Don’t know if that made sense, but we’ll roll with it. My close friends know me extremely well, and say that they love me for who I am, and love my story and everything about me. To this day, I’m not sure if it’s because we’re friends that they say that, or if they actually mean it. Anyways, I’ve constantly had trouble opening up to new people, and have been told that once someone gets to know me, they fall in love with me…just kidding, they fall in love with my personality. Anyways, let’s get back on topic.</p>
@@ -75,7 +92,8 @@ I am a finance and business information systems double major, a horn frog, and a
 
                                 <p><b>Ending Notes </b></p>
                                 <p>I feel much more confident about writing already. If you somehow made it to the end of this, I’d like to applaud you first, and then thank you. You somehow made it through walls of text about a random guy talking about his life. Well done. Anyways, please, please, please give me any suggestions you have on improving this thing. If you couldn’t already tell, I’m kinda new at this. Ciao!</p>
-
+                                    <p><a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">Show Less</a></p>
+                                </div>
 
                                 </div><!--//desc-->
                             </div><!--//item-->
@@ -177,9 +195,6 @@ I am a finance and business information systems double major, a horn frog, and a
     <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="assets/plugins/github-activity/dist/mustache/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/dist/github-activity-0.1.0.min.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>

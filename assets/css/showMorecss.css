@@ -1,0 +1,15 @@
+.more {
+    display: none;
+}
+a.showLink, a.hideLink {
+    text-decoration: none;
+    color: #36f;
+    align-content: center;
+    background: transparent url(down.gif) no-repeat left;
+}
+a.hideLink {
+    background: transparent url(up.gif) no-repeat left;
+}
+a.showLink:hover, a.hideLink:hover {
+    border-bottom: 1px dotted #36f;
+}
